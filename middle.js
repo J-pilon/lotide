@@ -30,6 +30,35 @@ const eqArrays = function(array1, array2) {
 
 };
 
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
+const middle = function(array) {
 
+  let arrayCopy = [];
+  let middleArray = [];
+  let indexMiddle = 0;
 
+  for (let index in array) {
+    arrayCopy.push(array[index]);
+  }
+
+  if (array.length === 2) {
+
+    return middleArray;
+
+  } else if (array.length % 2 === 0) {
+
+    indexMiddle = (array.length / 2) - 1;
+
+    middleArray.push(arrayCopy.splice(indexMiddle,2));
+
+    return middleArray;
+
+  } else {
+    indexMiddle = (array.length - 1) / 2;
+
+    middleArray.push(arrayCopy.splice(indexMiddle, 1));
+
+    return middleArray;
+  }
+};
+
+console.log(middle([1,2]));
