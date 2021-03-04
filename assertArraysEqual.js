@@ -20,16 +20,25 @@ const eqArrays = function(array1, array2) {
     }
   }
 };
+const assertEqual = function(actual, expected) {
+  if (actual === expected) {
+    console.log(`Assertion Passed: ${actual} === ${expected}`);
+  } else if (actual !== expected) {
+    console.log(`Assertion Failed: ${actual} !== ${expected}`);
+  }
+};
 
-function assertArraysEqual(){
-  if (eqArrays(array1, array2)){
+function assertArraysEqual(arraysToCompare){
+  if (arrayToCompare){
     console.log(`${array1} === ${array2}`);
-  } else if (!eqArrays(array1, array2)) {
+  } else if (!arrayToCompare) {
     console.log(`${array1} !== ${array2}`);
   }
 };
 
 const array1 = [1,2,3];
-const array2 = [1,1,3];
+const array2 = [1,2,3];
 
-assertArraysEqual();
+// assertArraysEqual(eqArrays(array1, array2));
+
+assertEqual(eqArrays(array1, array2), true);
