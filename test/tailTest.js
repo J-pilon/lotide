@@ -1,8 +1,16 @@
+const assert = require('chai').assert;
 const tail = require('../tail');
-const assertEqual = require('../assertEqual');
 
-// const result = tail([1,2,3,4,5]);
-// assertEqual(result[0], 2);
-// assertEqual(result[1], 3);
-// assertEqual(result[2], 4);
-// assertEqual(result[3], 5);
+describe("#tail", () => {
+  it("returns return the whole array except for the first element", () => {
+    assert.deepEqual(tail([1, 2, 3]), [2,3]);
+  });
+
+  it("returns '5' for ['5']", () => {
+    assert.deepEqual(tail([5]), [5]); 
+  });
+
+  it("return undefined when array is empty", () => {
+    assert.deepEqual(tail([]), undefined); 
+  })
+});
