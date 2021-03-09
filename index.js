@@ -11,7 +11,7 @@ const eqObjects = require('./eqObjects');
 const findKey = require('./findKey');
 const findKeyByValue = require('./findKeyByValue');
 const letterPositions = require('./letterPositions');
-const Map = require('./Map');
+const map = require('./map');
 const takeUntil = require('./takeUntil');
 const without = require('./without');
 
@@ -27,8 +27,9 @@ module.exports = {
   eqArrays: eqArrays,
   eqObjects: eqObjects,
   findKey: findKey,
+  findKeyByValue: findKeyByValue,
   letterPositions: letterPositions,
-  Map: Map,
+  map: map,
   takeUntil: takeUntil,
   without: without
-}
+};
