@@ -1,9 +1,4 @@
-
-
 const words = ["ground", "control", "to", "major", "tom"];
-// argument an array to map
-// argument a callback function
-// function will return a new array
 
 const map = function(array, callback) {
 

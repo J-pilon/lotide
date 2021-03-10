@@ -46,8 +46,6 @@ const letterPositions = function(sentence) {
     }
   }
   return results;
-
-  
 }
 
 const mySentence = 'hello';
@@ -58,8 +56,4 @@ assertArraysEqual(letterPositions("hello").l, [2,3]);
 
 
 
-/*
-I need a string
-I need to produce an object
-That object needs to contain properties for each letter
-*/
+

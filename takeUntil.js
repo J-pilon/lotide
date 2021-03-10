@@ -1,8 +1,3 @@
-// parameter one is an array
-// parameter two is a callback
-// the callback function will only take one value
-// callback with return a truthy value
-// takeUntil function pushes values into another array until call back return truthy
 const eqArrays = function(array1, array2) {
 
   let longestArray = [];
