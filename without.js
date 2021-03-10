@@ -1,31 +1,3 @@
-const eqArrays = function(array1, array2) {
-
-  let longestArray = [];
-  if(array1.length > array2.length){
-      longestArray = array1;
-    } else {
-      longestArray = array2;
-    }
-  for (let i = 0; i < longestArray.length; i++) {
-    if (array1[i] !== array2[i]) {
-      return false;
-    } 
-  }
-  for (let i = 0; i < longestArray.length; i++) {
-     if (array1[i] === array2[i]) {
-      return true;
-    }
-  }
-};
-
-function assertArraysEqual(){
-  if (eqArrays(array1, array2)){
-    console.log(`${array1} === ${array2}`);
-  } else if (!eqArrays(array1, array2)) {
-    console.log(`${array1} !== ${array2}`);
-  }
-};
-
 const without = function (array, itemsToRemove) {
   let newArray = [];
   for (let i = 0; i < array.length; i++) {
@@ -46,6 +18,4 @@ const without = function (array, itemsToRemove) {
   
 };
 
-let array = [1,2,3,4,5];
-
-console.log(without(array, [2,1]));
+module.exports = without;
